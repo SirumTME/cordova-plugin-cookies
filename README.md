@@ -23,6 +23,11 @@ cordova plugin add cordova-plugin-cookies
 - Android
 - iOS
 
+## Changes compared to the original Repository
+
+- No Domain Location validatopm
+- All cookies are getting returned
+
 ## Limitations
 
 It doen't work with the UIWebView on iOS (It's deprecated by Apple).
