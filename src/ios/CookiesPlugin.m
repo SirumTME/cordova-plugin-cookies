@@ -34,14 +34,11 @@
         // iterate all cookies
         for (NSHTTPCookie *cookie in allCookies) {
             // check url with domain
-            if ([url rangeOfString:cookie.domain].location != NSNotFound) {
-                // append ; before cookie if its not first cookie
-                if ([cookieValue length] > 0) {
-                    cookieValue = [[NSString alloc] initWithFormat:@"%@;", cookieValue];
-                }
-                // append cookie to cookie value
-                cookieValue = [[NSString alloc] initWithFormat:@"%@%@=%@", cookieValue, cookie.name, cookie.value];
+            if ([cookieValue length] > 0) {
+                cookieValue = [[NSString alloc] initWithFormat:@"%@;", cookieValue];
             }
+            // append cookie to cookie value
+            cookieValue = [[NSString alloc] initWithFormat:@"%@%@=%@", cookieValue, cookie.name, cookie.value];
         }
 
         // return cookie value
